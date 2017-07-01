@@ -4,5 +4,5 @@ while (1) {
 	print "$X $M\n"; 
 	last if ($X == scalar($M)); 
 	$X=scalar($M);
-	$HH=`cat deps.txt | while read I; do git clone https://github.com/jcd/\$I.git \$I ; done;`;
+	$HH=`cat deps.txt | while read I; do git clone https://github.com/jcd/\$I.git \$I ; dub add-local \$I ; done;`;
 }
