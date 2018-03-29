@@ -9,10 +9,10 @@ while (1) {
 	open my $fh, '<', "deps.txt" or die "Cannot open deps.txt: $!";
 	
 	while ( my $line = <$fh> ) {
-		print "git clone https://github.com/jcd/\${line}.git \${line}\n";
-		print `git clone https://github.com/jcd/\${line}.git \${line}` . "\n";
-		print "dub add-local \${line}\n";
-		print `dub add-local \${line}` . "\n";
+		print "git clone https://github.com/jcd/${line}.git ${line}\n";
+		print `git clone https://github.com/jcd/${line}.git ${line}` . "\n";
+		print "dub add-local ${line}\n";
+		print `dub add-local ${line}` . "\n";
 	}
 
 	close($fh);
