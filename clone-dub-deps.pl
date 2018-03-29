@@ -15,7 +15,7 @@ while (1) {
 
 		if (grep( /^$line$/, @PACKS ))
 		{
-			continue;
+			next;
 		}
 
 		push @PACKS, $line;
