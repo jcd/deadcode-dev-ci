@@ -2,7 +2,7 @@ $X=0;
 while (1) {
 	$M=`find . -not -regex .*\.dub/dub.json -a -name dub.json | while read F; do cat \$F | perl -ne 'print if s/.*\\"(deadcode-.*)\\"\\s*?:.*/\\1/' ; done | sort | uniq | tee deps.txt | wc -l`;
 	print "$X $M\n"; 
-	prin `cat deps.txt` . "\n";
+	print `cat deps.txt` . "\n";
 	last if ($X == scalar($M)); 
 	$X=scalar($M);
 
