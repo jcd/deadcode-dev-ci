@@ -1,8 +1,6 @@
 my @PACKS = ();
 $X=0; 
 
-print `sudo apt-get install libwww-perl`;
-
 while (1) {
 	$M=`find . -not -regex .*\.dub/dub.json -a -name dub.json | while read F; do cat \$F | perl -ne 'print if s/.*\\"(deadcode-.*)\\"\\s*?:.*/\\1/' ; done | sort | uniq | tee deps.txt | wc -l`;
 	# print "$X $M\n"; 
