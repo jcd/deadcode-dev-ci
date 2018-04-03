@@ -30,7 +30,7 @@ void forceCoverageBetweenMarks(File fr, File fw)
 	}
 }
 
-int main(string argv[])
+int main(string[] argv)
 {
 	foreach (string filePath; dirEntries("","*.lst", SpanMode.shallow, false))
 	{
